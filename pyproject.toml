@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sherlockeys"
-version = "0.1.0"
+version = "0.1.5"
 description = "Sherlockeys is a usefull tool for pen-tester. It can quickly try to discover if a given api key works against the most common saas applications."
 authors = ["s2b1n0 <s2b1n0.git@gmail.com>"]
 license = "Apache-2.0"
