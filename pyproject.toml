@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "sherlockeys"
+version = "0.1.0"
+description = "Sherlockeys is a usefull tool for pen-tester. It can quickly try to discover if a given api key works against the most common saas applications."
+authors = ["s2b1n0 <s2b1n0.git@gmail.com>"]
+license = "Apache-2.0"
+repository = "https://github.com/s2b1n0/sherlockeys"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/s2b1n0/sherlockeys/issues"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.28.1"
+colorama = "^0.4.5"
+validators = "^0.20.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+sherlockeys = 'sherlockeys.entry:main'
