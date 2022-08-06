@@ -7,12 +7,18 @@ from sherlockeys.lib.utils.helper import Helper
 import sherlockeys.lib.utils.const as CONST
 from sherlockeys.sources import *
 
+
 class Sherlockeys:
 
     def __init__(self, args: argparse) -> None:
         print(CONST.__header__)
 
         self.args = args
+
+        self.client_mode = False
+        if self.args.client is not None:
+            self.client_mode = True
+
         self.SOURCES = (
             GitlabPersonalToken(self.args),
             GithubPersonalToken(self.args),
@@ -42,6 +48,7 @@ class Sherlockeys:
             DelightedApiKey(self.args),
             ButterCMSApiKey(self.args),
             LokaliseApiKey(self.args),
+            FacebookAppSecret(self.args)
         )
         if self.args.debug:
             Logger.info(f"\nKey: {self.args.key}\n"
@@ -49,9 +56,16 @@ class Sherlockeys:
         Helper.start_script_message()
 
     def scan(self, source):
-        source.run()
-        print(f"{source.module_name} = ✅ ({source.http_status_code}) {source.doc_url}"
-              if source.is_authorized else f"{source.module_name} = ❌ ({source.http_status_code})")
+        if self.client_mode is False and source.client_mode is False:
+            source.run()
+            print(f"{source.module_name} = ✅ ({source.http_status_code}) {source.doc_url}"
+                  if source.is_authorized else f"{source.module_name} = ❌ ({source.http_status_code})")
+        elif self.client_mode is True and source.client_mode is True:
+            source.run()
+            print(f"{source.module_name} = ✅ ({source.http_status_code}) {source.doc_url}"
+                  if source.is_authorized else f"{source.module_name} = ❌ ({source.http_status_code})")
+        else:
+            pass
 
     def run(self):
         try:

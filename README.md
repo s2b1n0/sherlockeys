@@ -27,7 +27,7 @@ sherlockeys <key>
 sherlockeys <key> -d
 ```
 
-**Enable client-id and client-secret support** (still in development)
+**Enable client-id and client-secret support**
 
 Add a client-id token to be tested together with the secret key, in applications that require client-id and client-key authentication
 
@@ -43,10 +43,10 @@ sherlockeys -h
 ## Supported Applications ##
 
 
-| Type		                    | Provider    |
-|---------------------------|------------------|
-| Single-key/token          | Gitlab Personal Token, Github Personal Token, Youtube Api Key, Twitter Bearer Token, Hubspot Private App Key, Heroku Api Key, NpmJs Access Token, Slack App Oauth Token, Spotify Client Secret, Visual Studio App Center Api Key, Bit.ly Api Access Token, Asana Personal Access Token, Zapier Webhook Token, Calendly Personal Access Token, Dropbox App Oauth2 Access Token, Sonarcloud Access Token, Ipstack Api Access Token, Shodan Api Token, TravisCi Api Token (.com and .org), CircleCi Personal Api Token, Jumpcloud Personal Api Key, PivotalTracker Api Token, Wakatime Api Key, Buildkite Access Token, Delighted Api Key, ButterCMS Api Key, Lokalise Api Key   					| 
-| Client id and secret auth | In development   | 
+| Type		                    | Provider                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Single-key/token          | Gitlab Personal Token, Github Personal Token, Youtube Api Key, Twitter Bearer Token, Hubspot Private App Key, Heroku Api Key, NpmJs Access Token, Slack App Oauth Token, Spotify Client Secret, Visual Studio App Center Api Key, Bit.ly Api Access Token, Asana Personal Access Token, Zapier Webhook Token, Calendly Personal Access Token, Dropbox App Oauth2 Access Token, Sonarcloud Access Token, Ipstack Api Access Token, Shodan Api Token, TravisCi Api Token (.com and .org), CircleCi Personal Api Token, Jumpcloud Personal Api Key, PivotalTracker Api Token, Wakatime Api Key, Buildkite Access Token, Delighted Api Key, ButterCMS Api Key, Lokalise Api Key   					 | 
+| Client id and secret auth | Facebook Application                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | 
 
 Thanks [streaak/keyhacks](https://github.com/streaak/keyhacks) for made it easier.
 

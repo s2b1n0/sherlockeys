@@ -26,3 +26,4 @@ from .buildkite_personal_api_access_token import BuildkiteAccessToken
 from .delighted_api_key import DelightedApiKey
 from .buttercms_api_key import ButterCMSApiKey
 from .lokalise_api_key import LokaliseApiKey
+from .facebook_appsecret import FacebookAppSecret
