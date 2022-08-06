@@ -10,6 +10,10 @@ class Requester:
 
     def __init__(self, args: argparse):
         self.key = args.key
+        if args.client is not False:
+            self.client_key = args.client
+        else:
+            self.client_key = None
         self.url = ""
         self.include_json = False
         self.json = {}
@@ -21,6 +25,7 @@ class Requester:
         self.doc_url = ""
         self.http_status_code = 0
         self.http_response_text = ""
+        self.client_mode = False
 
         self.is_authorized = bool
 
