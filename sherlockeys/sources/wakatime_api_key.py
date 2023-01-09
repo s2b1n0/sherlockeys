@@ -11,7 +11,7 @@ class WakatimeApiKey(Requester):
 
     def run(self):
         self.set_module_name("WakaTime Api Key")
-        self.set_url(f"https://wakatime.com/api/v1/users/current/projects/?api_key={self.key}")
+        self.set_url(f"https://wakatime.com/api/v1/users/current?api_key={self.key}")
         self.set_http_method('get')
         self.make_request()
         self.check_if_authorized(self.http_status_code)
